@@ -18,37 +18,37 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #f7f5ed;
+  --default-color: #26344a;
+  --heading-color: #091a3a;
+  --accent-color: #c9a84a;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  --nav-hover-color: #dfc66a;
+  --nav-mobile-background-color: #091a3a;
+  --nav-dropdown-background-color: #091a3a;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #dfc66a;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #f1eee3;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #091a3a;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #12284f;
   --contrast-color: #ffffff;
 }
 
@@ -222,8 +222,9 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #091a3a;
+  border-bottom: 2px solid #c9a84a;
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -239,12 +240,14 @@ h6 {
 }
 
 .header .logo h1 {
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
+  line-height: 1.05;
   margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--accent-color);
+  letter-spacing: 0;
+  text-transform: none;
+  color: #dfc66a;
 }
 
 .header .btn-getstarted,
@@ -524,8 +527,9 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #091a3a;
+  border-top: 3px solid #c9a84a;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -894,7 +898,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  background: linear-gradient(90deg, rgba(9, 26, 58, 0.94), rgba(9, 26, 58, 0.62));
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -907,7 +911,9 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #ffffff;
+  font-size: 52px;
   font-weight: 700;
 }
 
