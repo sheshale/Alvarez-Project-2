@@ -2066,6 +2066,182 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Admissions Section
+--------------------------------------------------------------*/
+.admissions-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admissions-step {
+  min-height: 280px;
+  position: relative;
+  padding: 28px 24px;
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 82%);
+  border-top: 4px solid var(--accent-color);
+  background: var(--surface-color);
+}
+
+.admissions-step .step-number {
+  color: color-mix(in srgb, var(--accent-color), transparent 35%);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.admissions-step .step-icon {
+  width: 48px;
+  height: 48px;
+  margin: 22px 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--heading-color);
+  color: var(--accent-color);
+  font-size: 22px;
+}
+
+.admissions-step h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.admissions-step p {
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.requirements-panel {
+  height: 100%;
+  padding: 38px;
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 84%);
+  background: var(--surface-color);
+}
+
+.requirements-panel .section-title {
+  padding-bottom: 24px;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.requirement-item {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-left: 3px solid var(--accent-color);
+  background: color-mix(in srgb, var(--background-color), var(--surface-color) 40%);
+}
+
+.requirement-item span {
+  flex: 0 0 40px;
+  color: var(--heading-color);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.requirement-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.enrollment-callout {
+  height: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px;
+  background: var(--heading-color);
+  color: #ffffff;
+}
+
+.enrollment-callout h3 {
+  margin: 18px 0 12px;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.enrollment-callout p {
+  color: color-mix(in srgb, #ffffff, transparent 18%);
+}
+
+.status-badge {
+  align-self: flex-start;
+  padding: 7px 12px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn-admissions-primary,
+.btn-admissions-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.btn-admissions-primary {
+  background: var(--accent-color);
+  color: var(--heading-color);
+}
+
+.btn-admissions-outline {
+  color: var(--accent-color);
+}
+
+.btn-admissions-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), #ffffff 12%);
+  color: var(--heading-color);
+}
+
+.btn-admissions-outline:hover {
+  background: var(--accent-color);
+  color: var(--heading-color);
+}
+
+@media (max-width: 991px) {
+  .admissions-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .admissions-timeline,
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements-panel,
+  .enrollment-callout {
+    padding: 24px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing .pricing-item {
